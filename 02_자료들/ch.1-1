@@ -1,0 +1,40 @@
+import urllib.request
+
+url = “http:/uta.pw/shodou/img/28/214.png”
+savename = “test1.png”
+
+urllib.request.urlretrieve(url, savename)
+print(“저장되었습니다”)
+
+#----------------------------------------------------
+import urllib.request
+
+url = “http:/uta.pw/shodou/img/28/214.png”
+savename = “test2”
+
+mem = urllib.request.urlopen(url).read()
+
+with open(savename, mode = “wb”) as f:
+	f,write(mem)
+	print(저장되었습니다.)
+#--------------------------------------------------------
+url = “http://api.aoikujira.com/ip/ini”
+res = urllib.request,urlopen(url)
+data = res.read()
+
+text = data.decode(“utf-8”)
+print(text)
+#----------------------------------------------------
+import urllib.parse
+API = “http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp”
+
+values = {
+	‘stnId’ : ‘108’
+}
+params = urllib.parse.urlencode(values)
+
+url = API + “?” + params
+print(“url = ”,url)
+data = urlib.request.urlopen(url).read()
+text = data.decode(“utf-8”)
+print(text)
